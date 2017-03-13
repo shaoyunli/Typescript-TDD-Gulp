@@ -1,0 +1,13 @@
+<p>Please input a number below.</p>
+<input type="number" ng-model="numberOfPrimes" min="1"></input>
+<div ng-show="primeTables != null">
+    <table>
+        <tbody ng-repeat="row in primeTables track by $index">
+            <tr ng-repeat="item in row track by $index">
+                <td>{{item}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</div>

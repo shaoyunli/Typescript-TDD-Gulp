@@ -1,0 +1,49 @@
+{
+  "name": "prime_tables",
+  "version": "1.0.0",
+  "description": "An application that takes numeric input (N) from a user and outputs a mulitplication table of (N) prime numbers.",
+  "main": "gulpfile.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npm run typings install && gulp",
+    "start": "gulp serve",
+    "typings": "typings"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sli6/prime_tables.git"
+  },
+  "keywords": [
+    "Prime",
+    "Multiplication",
+    "Typescript",
+    "AngularJs"
+  ],
+  "author": "Shaoyun Li",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sli6/prime_tables/issues"
+  },
+  "homepage": "https://github.com/sli6/prime_tables#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.12.5",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-debug": "^2.1.2",
+    "gulp-inject": "^4.0.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-tslint": "^5.0.0",
+    "gulp-typescript": "^2.13.0",
+    "jasmine": "^2.5.3",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.5.0",
+    "superstatic": "^4.0.2",
+    "tslint": "^3.8.1",
+    "typescript": "^1.8.10",
+    "typings": "^0.8.1"
+  },
+  "directories": {
+    "test": "test"
+  }
+}
