@@ -1,6 +1,6 @@
 ((): void => {
 
-    let app = angular.module("primeTables", ["ngRoute", "ngAnimate"]);
+    let app = angular.module("primeTables", ["ngRoute"]);
 
     app.config(["$routeProvider", ($routeProvider) => {
         $routeProvider.when("/",

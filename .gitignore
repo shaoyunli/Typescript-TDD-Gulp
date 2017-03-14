@@ -2,7 +2,7 @@
 .DS_Store
 npm-debug.log
 /typings/
-**/bower_packages
+**/bower_components
 
 # all generated JS
 src/js

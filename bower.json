@@ -1,0 +1,29 @@
+{
+  "name": "prime_tables",
+  "description": "An application that takes numeric input (N) from a user and outputs a mulitplication table of (N) prime numbers.",
+  "main": "gulpfile.config.js",
+  "authors": [
+    "Shaoyun Li"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Prime",
+    "Multiplication",
+    "Typescript",
+    "AngularJs"
+  ],
+  "homepage": "https://github.com/sli6/prime_tables",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-mocks": "^1.6.3",
+    "angular": "angularjs#^1.6.3",
+    "angular-route": "^1.6.3"
+  }
+}
