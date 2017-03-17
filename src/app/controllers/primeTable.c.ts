@@ -23,7 +23,6 @@ namespace primeTables {
                 (n, o) => {
                     $scope.hasError = !this.validationService.validate($scope.numberOfPrimes);
                 })
-            debugger;
             $scope.generatePrimeTable = () => {
                 $scope.primeTable = this.primeTableService.getPrimeTable($scope.numberOfPrimes);
             }
