@@ -2,9 +2,19 @@ namespace primeTables {
 
     export class PrimeGeneratorService {
 
-        public getPrimes(n: number): Array<number> {
+        static $inject = ["validationService"];
+        public constructor(
+            private validationService: ValidationService
+        ){}
 
-            return null;
+        public getPrimes(size: number): Array<number> {
+            
+            if (this.validationService.validate(size) == false){
+                return new Array<number>();
+            }
+
+            var primes = [2];
+            return primes;
 
         }
     }
