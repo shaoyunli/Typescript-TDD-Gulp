@@ -2,15 +2,17 @@
 <input type="number" ng-model="numberOfPrimes"></input>
 <br/>
 <span ng-show="hasError" style="color: red">Please enter an integer. The minimium number is 1. </span>
-<div ng-show="primeTables != null">
+<div>
+    <button type="button" ng-disabled="hasError" ng-click="generatePrimeTable()">Generate Prime Table</button>
+</div>
+<div ng-show="primeTable != null">
     <table>
-        <tbody ng-repeat="row in primeTables track by $index">
-            <tr ng-repeat="item in row track by $index">
-                <td>{{item == null ? '' : item}}</td>
+        <tbody>
+            <tr ng-repeat="row in primeTable track by $index">
+                <td style="padding: 5px;" ng-repeat="item in row track by $index">
+                    {{item == null ? '' : item}}
+                </td>
             </tr>
         </tbody>
     </table>
-</div>
-<div>
-    <button ng-disabled="hasError" ng-click="generatePrimeTable()"/>
 </div>
