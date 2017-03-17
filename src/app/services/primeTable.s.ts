@@ -1,12 +1,11 @@
-module primeTables{
-
+namespace primeTables {
     export class PrimeTableService {
 
-        public getPrimeTables(primes: Array<number>) : number[][]{
+    public getPrimeTables(numberOfPrimes: number): number[][] {
             return null;
         }
     }
 
     angular.module("primeTables")
-    .service("primeTableService", PrimeTableService);
+        .service("primeTableService", PrimeTableService);
 }

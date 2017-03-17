@@ -1,8 +1,8 @@
-module primeTables{
+namespace primeTables {
 
     export class PrimeGeneratorService {
 
-        public getPrimes(n: number) : Array<number>{
+        public getPrimes(n: number): Array<number> {
 
             return null;
 
@@ -10,5 +10,5 @@ module primeTables{
     }
 
     angular.module("primeTables")
-    .service("primeGeneratorService", PrimeGeneratorService);
+        .service("primeGeneratorService", PrimeGeneratorService);
 }

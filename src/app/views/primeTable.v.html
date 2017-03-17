@@ -1,5 +1,7 @@
 <p>Please input a number below.</p>
-<input type="number" ng-model="numberOfPrimes" min="1"></input>
+<input type="number" ng-model="numberOfPrimes"></input>
+<br/>
+<span ng-show="hasError" style="color: red">Please enter an integer. The minimium number is 1. </span>
 <div ng-show="primeTables != null">
     <table>
         <tbody ng-repeat="row in primeTables track by $index">
@@ -7,7 +9,5 @@
                 <td>{{item}}</td>
             </tr>
         </tbody>
-
     </table>
-
 </div>

@@ -1,14 +1,9 @@
-module primeTables{
-
+namespace primeTables {
     export class ValidationService {
-
-        public validate(n: number) : boolean{
-
-            return null;
-
+        public validate(n: number): boolean {
+            return false;
         }
-    }
-
+    };
     angular.module("primeTables")
-    .service("valdationService", ValidationService);
+        .service("valdationService", ValidationService);
 }

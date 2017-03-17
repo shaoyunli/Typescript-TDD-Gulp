@@ -25,7 +25,7 @@ gulp.task('ts-lint', function () {
  * Compile TypeScript and include references to library and app .d.ts files.
  */
 gulp.task('compile-ts', function () {
-    var sourceTsFiles = [config.allTypeScript,                //path to typescript files
+    var sourceTsFiles = [config.allTypeScript,               //path to typescript files
                          config.libraryTypeScriptDefinitions]; //reference to library .d.ts files
                         
 

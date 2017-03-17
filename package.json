@@ -4,7 +4,7 @@
   "description": "An application that takes numeric input (N) from a user and outputs a mulitplication table of (N) prime numbers.",
   "main": "gulpfile.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "gulp compile-ts && karma start",
     "postinstall": "npm run typings install && gulp",
     "start": "gulp serve",
     "typings": "typings"
@@ -25,7 +25,9 @@
     "url": "https://github.com/sli6/prime_tables/issues"
   },
   "homepage": "https://github.com/sli6/prime_tables#readme",
-  "dependencies": {},
+  "dependencies": {
+    "karma-phantomjs-launcher": "^1.0.4"
+  },
   "devDependencies": {
     "bower": "^1.8.0",
     "browser-sync": "^2.12.5",
