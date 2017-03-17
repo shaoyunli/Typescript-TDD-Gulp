@@ -1,7 +1,7 @@
 namespace primeTables {
     export class PrimeTableService {
 
-    public getPrimeTables(numberOfPrimes: number): number[][] {
+    public getPrimeTable(numberOfPrimes: number): number[][] {
             return null;
         }
     }

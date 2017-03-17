@@ -4,6 +4,7 @@ namespace primeTables {
     interface IScope extends ng.IScope{
         numberOfPrimes: number;
         hasError: boolean;
+        primeTable: number[][]        
     }
 
     class PrimeTablesController {
@@ -20,6 +21,8 @@ namespace primeTables {
             (n, o)=>{             
                     $scope.hasError = !this.valdationService.validate($scope.numberOfPrimes)
             })
+debugger;
+            $scope.primeTable = this.primeTableService.getPrimeTable($scope.numberOfPrimes);
         }
     }
 
