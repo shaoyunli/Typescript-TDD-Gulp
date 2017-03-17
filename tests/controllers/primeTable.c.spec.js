@@ -1,18 +1,18 @@
-describe("The Prime Table Controller", function () {
+describe('The Prime Table Controller', function () {
 
-    var scope, primeTablesController, mockPrimeTableService, mockValdationService, $httpBackend;
+    var scope, primeTablesController, mockPrimeTableService, mockvalidationService, $httpBackend;
 
     beforeEach(module('primeTables'));
 
-    beforeEach(inject(function ($injector, $controller, $rootScope, _primeTableService_, _valdationService_) {
+    beforeEach(inject(function ($injector, $controller, $rootScope, _primeTableService_, _validationService_) {
         scope = $rootScope.$new();
         mockPrimeTableService = _primeTableService_;
-        mockValdationService = _valdationService_;
-        $httpBackend = $injector.get("$httpBackend");        
+        mockvalidationService = _validationService_;
+        $httpBackend = $injector.get('$httpBackend');        
         
-        primeTablesController = $controller("primeTablesController", {
+        primeTablesController = $controller('primeTablesController', {
             $scope: scope,
-            valdationService: mockValdationService,
+            validationService: mockvalidationService,
             primeTableService: mockPrimeTableService
         });
     }));
@@ -21,10 +21,10 @@ describe("The Prime Table Controller", function () {
         expect(primeTablesController).not.toBeNull();
     });
 
-    it("should validate input and show error if input is invalid when it is changed.", function () {
+    it('should validate input and show error if input is invalid when it is changed.', function () {
 
         // Arrange        
-        spyOn(mockValdationService, "validate").and.returnValue(false);
+        spyOn(mockvalidationService, 'validate').and.returnValue(false);
                 
         // Act
         scope.numberOfPrimes = 0;
@@ -34,10 +34,10 @@ describe("The Prime Table Controller", function () {
         expect(scope.hasError).toEqual(true);
     })
 
-    it("should validate input and hide error if input is valid when it is changed.", function () {
+    it('should validate input and hide error if input is valid when it is changed.', function () {
 
         // Arrange        
-        spyOn(mockValdationService, "validate").and.returnValue(true);
+        spyOn(mockvalidationService, 'validate').and.returnValue(true);
                 
         // Act
         scope.numberOfPrimes = 6;
@@ -47,7 +47,7 @@ describe("The Prime Table Controller", function () {
         expect(scope.hasError).toEqual(false);
     })
 
-    it("should generate prime table.", function () {
+    it('should generate prime table.', function () {
 
         // Arrange   
         var table = [
@@ -56,9 +56,10 @@ describe("The Prime Table Controller", function () {
             [3, 6, 9, 15],
             [5, 10, 15, 25]
             ];     
-        spyOn(mockPrimeTableService, "getPrimeTable").and.returnValue(table);
-                
+        spyOn(mockPrimeTableService, 'getPrimeTable').and.returnValue(table);
+        debugger        
         // Act
+        scope.generatePrimeTable();
         scope.$digest();
         
         // Assert

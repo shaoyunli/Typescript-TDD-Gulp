@@ -1,28 +1,32 @@
 namespace primeTables {
     "use strict";
 
-    interface IScope extends ng.IScope{
+    interface IScope extends ng.IScope {
         numberOfPrimes: number;
         hasError: boolean;
-        primeTable: number[][]        
+        generatePrimeTable: Function;
+        primeTable: number[][];
+        valid: boolean
     }
 
     class PrimeTablesController {
 
-        static $inject = ["$scope", "primeTableService", "valdationService"];
+        static $inject = ["$scope", "primeTableService", "validationService"];
         public constructor(
             $scope: IScope,
             private primeTableService: PrimeTableService,
-            private valdationService: ValidationService
+            private validationService: ValidationService
         ) {
-            
+
             $scope.hasError = false;
-            $scope.$watch(()=> {return $scope.numberOfPrimes},
-            (n, o)=>{             
-                    $scope.hasError = !this.valdationService.validate($scope.numberOfPrimes)
-            })
-debugger;
-            $scope.primeTable = this.primeTableService.getPrimeTable($scope.numberOfPrimes);
+            $scope.$watch(() => { return $scope.numberOfPrimes },
+                (n, o) => {
+                    $scope.hasError = !this.validationService.validate($scope.numberOfPrimes);
+                })
+            debugger;
+            $scope.generatePrimeTable = () => {
+                $scope.primeTable = this.primeTableService.getPrimeTable($scope.numberOfPrimes);
+            }
         }
     }
 
