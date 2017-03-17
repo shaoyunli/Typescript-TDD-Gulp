@@ -57,7 +57,7 @@ describe('The Prime Table Controller', function () {
             [5, 10, 15, 25]
             ];     
         spyOn(mockPrimeTableService, 'getPrimeTable').and.returnValue(table);
-        debugger        
+             
         // Act
         scope.generatePrimeTable();
         scope.$digest();

@@ -19,7 +19,6 @@ describe('The Validation Service', function () {
     })
 
     it('should return false when validating -1', function () {   
-        debugger   
         var valid = theValidationService.validate(-1);
         expect(valid).toEqual(false);
     })

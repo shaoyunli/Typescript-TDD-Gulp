@@ -6,7 +6,7 @@
     <table>
         <tbody ng-repeat="row in primeTables track by $index">
             <tr ng-repeat="item in row track by $index">
-                <td>{{item == 0 ? '' : item}}</td>
+                <td>{{item == null ? '' : item}}</td>
             </tr>
         </tbody>
     </table>
