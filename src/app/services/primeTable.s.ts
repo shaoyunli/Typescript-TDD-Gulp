@@ -1,8 +1,16 @@
 namespace primeTables {
     export class PrimeTableService {
 
-    public getPrimeTable(numberOfPrimes: number): number[][] {
-            return null;
+        static $inject = ["validationService", "primeGeneratorService"];
+        public constructor(
+            private validationService: ValidationService,
+            private primeGeneratorService: PrimeGeneratorService
+        ) { }
+
+        public getPrimeTable(size: number): number[][] {
+            if (this.validationService.validate(size) == false) {
+                return null;
+            }
         }
     }
 
