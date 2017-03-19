@@ -39,6 +39,8 @@ namespace primeTables {
             return primes;
 
         }
+        
+        //TODO: Consider to use Sieve of Eratosthenes algorithm        
     }
 
     angular.module("primeTables")

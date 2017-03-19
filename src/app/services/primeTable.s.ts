@@ -1,11 +1,10 @@
 namespace primeTables {
     export class PrimeTableService {
-
         static $inject = ["validationService", "primeGeneratorService"];
         public constructor(
             private validationService: ValidationService,
             private primeGeneratorService: PrimeGeneratorService
-        ) { }
+        ) { };
 
         public getPrimeTable(size: number): number[][] {
             if (this.validationService.validate(size) == false) {
@@ -13,7 +12,7 @@ namespace primeTables {
             }
 
             var primes = this.primeGeneratorService.getPrimes(size);
-           
+
             if (primes.length > 0) {
 
                 var row = primes.slice(0);

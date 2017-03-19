@@ -51,7 +51,7 @@ describe('The Prime Generator Service', function(){
         expect(primes).toEqual([2, 3, 5, 7, 11, 13, 17]);
     })
 
-    it('should return [2, 3, 5, 7, 11, 13, 17] when the input is 7', function(){  
+    it('should return [2	3	5	7	11	13	17	19	23	29	31	37] when the input is 12', function(){  
 
         // Arrange        
         spyOn(mockValidationService, ['validate']).and.returnValue(true);

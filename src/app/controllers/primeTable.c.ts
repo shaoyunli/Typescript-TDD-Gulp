@@ -21,8 +21,9 @@ namespace primeTables {
             $scope.hasError = false;
             $scope.$watch(() => { return $scope.numberOfPrimes },
                 (n, o) => {
-                    if(n != null)
-                    $scope.hasError = !this.validationService.validate($scope.numberOfPrimes);
+                    if(n != null){
+                        $scope.hasError = !this.validationService.validate($scope.numberOfPrimes);
+                    }
                 })
             $scope.generatePrimeTable = () => {
                 $scope.primeTable = this.primeTableService.getPrimeTable($scope.numberOfPrimes);
