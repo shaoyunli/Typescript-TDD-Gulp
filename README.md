@@ -6,13 +6,19 @@ The application that takes numeric input (N) from a user and outputs a multiplic
 - Install global dependencies **if necessary**
 
   ```
-    npm install -g gulp-cli typings superstatic karma-cli
+    npm install -g gulp-cli typings superstatic karma-cli bower
   ```
 
 - Install node packages:
 
   ```
    npm install
+  ```
+  
+- Install bower packages:
+
+  ```
+   bower install
   ```
 
 - Launch the server
