@@ -23,7 +23,7 @@ The application that takes numeric input (N) from a user and outputs a multiplic
 On the webpage, 
  1. Type in a number
  2. If the number is invalid, an error message will show and the button will be disabled.
- 3. If the number is valid, a multiplication table of the given number of prime numbers will show. 
+ 3. If the number is valid, after clicking the button, a multiplication table of the given number of prime numbers will show on the page. 
 
 # How to run the tests
  ```
