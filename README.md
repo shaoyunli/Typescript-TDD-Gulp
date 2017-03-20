@@ -42,7 +42,7 @@ On the webpage,
 4. The application was written using Typescript which can improve the code quality.
 
 # What I would have done with more time
-1. Overall, the performance of the algorithm needs to be improved. The current implementation's efficiency is not good enough. When running on Chrome, it cannot cope with the number over 800 due to the inefficiency of the current implementation and the limitation of web browser.
+1. Overall, the performance of the algorithm needs to be improved. The current implementation's performance is not good enough. When running on Chrome, it cannot cope with the number over 800 due to the inefficiency of the current implementation and the limitation of web browser.When running on Safari (Mac), it took 1 minute 5 seconds to generate the table for the size 800. 
 2. In terms of the algorithm, I would like to consider the implementation of some advanced approaches, such as Sieve of Eratosthenes algorithm.
 3. For the limitation of running service code in web browser, refactoring the architecture to move the service code to server side, such as writing service in JavaScript/Typescript or C# running on nodejs, allows to use more memory on server and improves the capability of application for very large numbers 
 4. On the view `primeTable.v.html`, the code inside html `{{item == null ? '' : item}}` can be extracted into an AngularJS filter which is testable.
