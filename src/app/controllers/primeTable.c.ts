@@ -6,7 +6,7 @@ namespace primeTables {
         hasError: boolean;
         generatePrimeTable: Function;
         primeTable: number[][];
-        valid: boolean
+        valid: boolean;
     }
 
     class PrimeTablesController {
@@ -19,15 +19,15 @@ namespace primeTables {
         ) {
 
             $scope.hasError = false;
-            $scope.$watch(() => { return $scope.numberOfPrimes },
+            $scope.$watch(() => { return $scope.numberOfPrimes; },
                 (n, o) => {
-                    if(n != null){
+                    if (n != null) {
                         $scope.hasError = !this.validationService.validate($scope.numberOfPrimes);
                     }
-                })
+                });
             $scope.generatePrimeTable = () => {
                 $scope.primeTable = this.primeTableService.getPrimeTable($scope.numberOfPrimes);
-            }
+            };
         }
     }
 

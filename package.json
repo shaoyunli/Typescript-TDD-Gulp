@@ -5,9 +5,9 @@
   "main": "gulpfile.config.js",
   "scripts": {
     "test": "gulp compile-ts && karma start",
-    "postinstall": "npm run typings install && gulp",
     "start": "gulp serve",
-    "typings": "typings"
+    "typings": "typings",
+    "postinstall": "typings install && gulp"
   },
   "repository": {
     "type": "git",

@@ -11,8 +11,8 @@ namespace primeTables {
             if (num % 2 === 0 || num % 3 === 0) {
                 return (num === 2 || num === 3);
             }
-            var numSqrt = Math.sqrt(num);
-            for (var i = 5; i <= numSqrt; i += 6) {
+            let numSqrt = Math.sqrt(num);
+            for (let i = 5; i <= numSqrt; i += 6) {
                 if (num % i === 0 || num % (i + 2) === 0) {
                     return false;
                 }
@@ -22,15 +22,14 @@ namespace primeTables {
 
         public getPrimes(size: number): Array<number> {
 
-            if (this.validationService.validate(size) == false) {
+            if (this.validationService.validate(size) === false) {
                 return new Array<number>();
             }
 
-            var primes: Array<number> = new Array<number>();
-            var counter = 2;
-            
-            while (primes.length < size){
-                if (this.isPrime(counter)){
+            let primes: Array<number> = new Array<number>();
+            let counter = 2;
+            while (primes.length < size) {
+                if (this.isPrime(counter)) {
                     primes.push(counter);
                 }
                 counter++;
@@ -39,8 +38,7 @@ namespace primeTables {
             return primes;
 
         }
-        
-        //TODO: Consider to use Sieve of Eratosthenes algorithm        
+        // TODO: Consider to use Sieve of Eratosthenes algorithm        
     }
 
     angular.module("primeTables")

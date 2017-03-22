@@ -7,20 +7,20 @@ namespace primeTables {
         ) { };
 
         public getPrimeTable(size: number): number[][] {
-            if (this.validationService.validate(size) == false) {
+            if (this.validationService.validate(size) === false) {
                 return null;
             }
 
-            var primes = this.primeGeneratorService.getPrimes(size);
+            let primes = this.primeGeneratorService.getPrimes(size);
 
             if (primes.length > 0) {
 
-                var row = primes.slice(0);
+                let row = primes.slice(0);
                 row.unshift(null);
-                var primeTable: number[][] = [row.slice(0)];
+                let primeTable: number[][] = [row.slice(0)];
                 row[0] = primes[0];
-                for (var i = 1; i <= primes.length; i++) {
-                    for (var j = 1; j <= primes.length; j++) {
+                for (let i = 1; i <= primes.length; i++) {
+                    for (let j = 1; j <= primes.length; j++) {
                         row[j] = primes[i - 1] * row[j];
                     }
                     primeTable.push(row);
