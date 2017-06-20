@@ -1,5 +1,7 @@
 # Prime Tables
 
+The application was developed using Typescript following Test Driven Development (Test first) approach. 
+
 The application that takes numeric input (N) from a user and outputs a multiplication table of (N) prime numbers.
 
 # How to run the application
@@ -41,7 +43,7 @@ On the webpage,
 3. The application is reusable and extendable with SOLID design principle. 
 4. The application was written using Typescript which can improve the code quality.
 
-# What I would have done with more time
+# To improve
 1. Overall, the performance of the algorithm needs to be improved. The current implementation's performance is not good enough. When running on Chrome, it cannot cope with the number over 800 due to the inefficiency of the current implementation and the limitation of web browser.When running on Safari (Mac), it took 1 minute 5 seconds to generate the table for the size 800. 
 2. In terms of the algorithm, I would like to consider the implementation of some advanced approaches, such as Sieve of Eratosthenes algorithm.
 3. For the limitation of running service code in web browser, refactoring the architecture to move the service code to server side, such as writing service in JavaScript/Typescript or C# running on nodejs, allows to use more memory on server and improves the capability of application for very large numbers 
